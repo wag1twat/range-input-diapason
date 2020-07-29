@@ -1,0 +1,111 @@
+@import '../../../styleguide/scroll.scss';
+.root {
+  width: 100%;
+  &__select {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #fff;
+    border: none;
+    outline: 0;
+    padding: 0;
+    height: 55px;
+    &:focus {
+      outline: 0;
+    }
+    span:nth-child(1) {
+      font-family: MullerRegular;
+      font-size: 18px;
+      letter-spacing: 0.08em;
+    }
+  }
+  &__checkbox_list {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    &__box {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row-reverse;
+      label {
+        width: calc(100% - 65px);
+        font-family: MullerRegular;
+        font-size: 15px;
+        line-height: 300%;
+        margin: 0;
+        user-select: none;
+        cursor: pointer;
+      }
+      input {
+        width: 35px;
+        height: 35px;
+        opacity: 0.5;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+        cursor: pointer;
+      }
+    }
+  }
+  &__list {
+    width: 100%;
+    max-height: 300px;
+    overflow-y: hidden;
+    list-style: none;
+    padding: 0;
+    overflow-y: scroll;
+    @include mixScroll();
+    li {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row-reverse;
+      cursor: pointer;
+      label {
+        width: calc(100% - 20px);
+        height: 100%;
+        user-select: none;
+        font-family: MullerRegular;
+        font-size: 14px;
+        height: 35px;
+        letter-spacing: 0.08em;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+      }
+      input {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  &__range {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    input {
+      width: calc(50% - 10px);
+      height: 51px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+      font-family: MullerRegular;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 188%;
+      text-align: center;
+    }
+  }
+}
+.active {
+  color: #009bde;
+}
+.unactive {
+  color: #aaaaaa;
+}
